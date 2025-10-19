@@ -1,0 +1,21 @@
+def count_sign_changes_short():
+    print("Вводьте ненульові цілі числа (0 для завершення):")
+    
+    count = 0
+    prev_sign = 0 
+
+    while True:
+        num = int(input())
+        if num == 0:
+            break
+        
+        current_sign = 1 if num > 0 else -1
+
+        if prev_sign != 0 and current_sign != prev_sign:
+            count += 1
+            
+        prev_sign = current_sign 
+
+    print(f"\nКількість змін знаку: {count}")
+
+count_sign_changes_short()
