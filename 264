@@ -1,0 +1,15 @@
+n = int(input("Введіть кількість учасників: "))
+
+scores = []
+
+for i in range(n):
+    correct_answers = int(input(f"Кількість правильних відповідей учасника {i+1}: "))
+    scores.append(correct_answers)
+
+winner_score = max(scores)
+print("Переможець відповів правильно на", winner_score, "питань.")
+
+if 0 in scores:
+    print("Yes")
+else:
+    print("No")
