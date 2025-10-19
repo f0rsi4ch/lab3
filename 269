@@ -1,0 +1,18 @@
+def input_until_integer():
+    
+         ("Програма очікує на введення цілого числа...")
+    print("Введіть ціле число, щоб вийти.")
+    
+    while True:
+        user_input = input("Введіть дані: ")
+        
+        try:
+            integer_value = int(user_input)
+            
+            print("True")
+            break
+            
+        except ValueError:
+            print(f"This is not a integer number. Try again...")
+
+input_until_integer()
